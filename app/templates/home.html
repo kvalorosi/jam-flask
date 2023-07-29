@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Type in your food sensitivities to see if we use those ingredients in our products!</h2>
+
+<div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <form method="POST" class="col-10">
+            {{ form.hidden_tag() }}
+
+            {{ form.ingredients(class='form-control', placeholder="ex:wheat, dairy, etc") }}
+            {{ form.submit(class='btn btn-primary', placeholder="Submit") }}
+        </form>
+
+    </div>
+</div>
+<div class="row justify-content-center">
+    {% if food %}
+    <div class="col-4">
+        <div class="card border-danger mb-3" style="width: 18rem;">
+            <div class="card-body text-danger">
+                <p class="card-text">{{food.name}}</p>
+
+
+            </div>
+
+
+
+
+
+
+            {% endif %}
+
+
+            {% endblock %}

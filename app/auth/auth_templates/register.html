@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Register here to place an order!</h2>
+<div class="container justify-content-center">
+    <div class="row justify-content-center">
+        <form  method="POST" class="col-10">
+            {{ form.hidden_tag() }}
+
+            {{ form.username(class='form-control', placeholder="Username") }}
+            {{ form.email(class='form-control', placeholder="Email") }}
+            {{ form.password(class='form-control', placeholder="Password") }}
+            {{ form.confirm_password(class='form-control', placeholder="Confirm Password") }}
+            {{ form.submit(class='btn btn-primary', placeholder="Submit") }}
+        </form>
+
+        </form>
+    </div>
+</div>
+
+<h2>Login below if your already signed up!</h2>
+
+<h2>Log In Here!</h2>
+<div class="container justify-content-center">
+    <div class="row-2">
+        <form  method="POST" class="col-12">
+        {{ form.hidden_tag() }}
+            
+
+            {{ form.username(class='form-control', placeholder="Username") }}
+            {{ form.password(class='form-control', placeholder="Password") }}
+            {{ form.submit(class='btn btn-primary', placeholder="LogIn") }}
+
+
+
+
+
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
