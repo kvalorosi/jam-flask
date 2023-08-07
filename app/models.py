@@ -49,6 +49,30 @@ class Products(db.Model):
             'prod_image' : self.prod_image
         }
 
+# class CartItem(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     product_id = db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
+#     quantity = db.Column(db.Integer, nullable=False)
+
+#     def __init__(self, product_id, quantity):
+#         self.product_id = product_id
+#         self.quantity = quantity
+
+#     def save_items(self):
+#         db.session.add(self)
+#         db.session.commit()
+
+
+#     def to_dict(self):
+#         product = Products.query.get(self.product_id)
+#         return {
+#             'id': self.id,
+#             'product': product,
+#             'quantity': self.quantity
+#         }
+
+
+
 
 
 

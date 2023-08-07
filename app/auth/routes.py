@@ -2,7 +2,7 @@
 from flask import Blueprint, flash, render_template, request, redirect, session, url_for
 from flask_login import current_user, login_user, logout_user
 from .forms import RegisterForm, LoginForm
-from ..models import User 
+from ..models import  User 
 from ..models import Products
 
 auth = Blueprint('auth', __name__, template_folder='auth_templates', url_prefix='/auth')
@@ -59,3 +59,10 @@ def get_products():
         'status' : 'ok',
         'products' : p_list
     }
+
+
+
+
+
+
+
